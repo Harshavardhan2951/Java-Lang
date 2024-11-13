@@ -1,0 +1,10 @@
+| Data Type | Size (in bytes)  | Minimum Value                           | Maximum Value                         |
+|-----------|------------------|-----------------------------------------|---------------------------------------|
+| byte      | 1                | -128                                    | 127                                   |
+| short     | 2                | -32,768                                 | 32,767                                |
+| int       | 4                | -2,147,483,648                          | 2,147,483,647                         |
+| long      | 8                | -9,223,372,036,854,775,808              | 9,223,372,036,854,775,807             |
+| float     | 4                | Approximately -3.40282347E+38           | Approximately 3.40282347E+38          |
+| double    | 8                | Approximately -1.79769313486231570E+308 | Approximately 1.79769313486231570E+308|
+| char      | 2                | '\u0000' (0)                            | '\uffff' (65,535)                     |
+| boolean   | (not precisely defined, typically 1 byte)                  | true or false                         |
