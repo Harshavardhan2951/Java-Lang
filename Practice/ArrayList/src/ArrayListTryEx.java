@@ -9,5 +9,8 @@ public class ArrayListTryEx {
         for (int i = 1; i <= 2; i++) {
             System.out.println(list.get(i));
         }
+
+        list.set(2, 5);
+        System.out.println(list.get(2));
     }
 }
