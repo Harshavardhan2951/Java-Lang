@@ -1,14 +1,15 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class L_Search_Array {
+public class L_Search_ArrayList {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> Numb = new ArrayList<>();
-        Numb.add(14);
-        Numb.add(47);
-        Numb.add(49);
-        Numb.add(44);
+        ArrayList<Integer> Numb = new ArrayList<>(Arrays.asList(14, 47, 49, 44));
+//        Numb.add(14);
+//        Numb.add(47);
+//        Numb.add(49);
+//        Numb.add(44);
         System.out.print("Enter the Target Number: ");
         int target = sc.nextInt();
 
