@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/*/
@@ -8,9 +9,11 @@ public class FirstANDLast {
         int target = input.nextInt();
 
         int[] Numb = {5, 7, 7, 8, 8, 10};
+        int[] result = searchRange(Numb, target);
+        System.out.println(Arrays.toString(result));
     }
 
-    public int[] searchRange(int[] nums, int target) {
+    public static int[] searchRange(int[] nums, int target) {
         int[] ans = {-1, -1};
         ans[0] = BinarySearch(nums, target, true);
         ans[1] = BinarySearch(nums, target, false);
@@ -19,7 +22,7 @@ public class FirstANDLast {
 
     }
 
-    int BinarySearch(int[] nums, int target, boolean findStartIndex) {
+    static int BinarySearch(int[] nums, int target, boolean findStartIndex) {
         int startIndex = 0, endIndex = nums.length - 1,ans = -1;
 
         while(startIndex <= endIndex) {
