@@ -31,10 +31,8 @@ public class BinarySearch_2D {
         int rows = Numb.length;
         int cols = Numb[0].length;// Be aware the matrix may be empty
         int rowStart = 0, rowEnd = rows - 1, cmid = cols / 2;
+        System.out.println(cols);
 
-//        if(rows == 1) {
-//            return BinarySearch(Numb, 0, 0, cols - 1, target);
-//        }
         //Run the Loop till you get the 2 rows
         while(rowStart < (rowEnd - 1)) {
             int midIndex = rowStart + (rowEnd - rowStart) / 2;
