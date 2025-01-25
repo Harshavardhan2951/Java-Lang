@@ -31,7 +31,6 @@ public class BinarySearch_2D {
         int rows = Numb.length;
         int cols = Numb[0].length;// Be aware the matrix may be empty
         int rowStart = 0, rowEnd = rows - 1, cmid = cols / 2;
-        System.out.println(cols);
 
         //Run the Loop till you get the 2 rows
         while(rowStart < (rowEnd - 1)) {
@@ -50,6 +49,8 @@ public class BinarySearch_2D {
             return new int[]{rowStart, cmid};
         } if(Numb[rowStart + 1][cmid] == target) {
             return new int[]{rowStart + 1, cmid};
+        }else {
+            rowStart++;
         }
         //First Part
         if(target <= Numb[rowStart][cmid - 1]) {
