@@ -2,9 +2,13 @@ import java.util.Arrays;
 
 public class Bubble_Sort {
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
         int[] arr = {3, 1, 5, 4, 2};
         ApplyBubbleSort(arr);
         System.out.println(Arrays.toString(arr));
+        long endTime = System.currentTimeMillis();
+        long totatTime = endTime - startTime;
+        System.out.println("totalTime: " + totatTime);
     }
 
     static void ApplyBubbleSort(int[] Numb) {
