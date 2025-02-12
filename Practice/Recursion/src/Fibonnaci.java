@@ -1,12 +1,16 @@
 class Fibonnaci {
     public static void main(String[] args) {
-        System.out.println(fib(4));
+        long startTime = System.currentTimeMillis();
+        int ans = Fibo(45);
+        System.out.println(ans);
+        long endTime = System.currentTimeMillis();
+        System.out.println(endTime - startTime);
     }
-
-    static int fib(int n) {
-        if(n < 45) {
+    public static int Fibo(int n) {
+        //Rule 1 : Write the Base Condition
+        if(n <= 1) {
             return n;
         }
-        return fib(n - 1) + fib(n - 2);
+        return Fibo(n - 1) + Fibo(n - 2);
     }
 }
