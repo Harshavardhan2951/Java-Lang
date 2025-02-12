@@ -11,6 +11,10 @@ class Fibonnaci {
         if(n <= 1) {
             return n;
         }
+        /*
+        * 1)First Goes with the Fibo(n-1) it goes until end of them till 0 that is Fibo[0]
+        * 2)After that it returns back the to the parent path,
+        * 3)Later it goes with the Fibo(n-2)*/
         return Fibo(n - 1) + Fibo(n - 2);
     }
 }
