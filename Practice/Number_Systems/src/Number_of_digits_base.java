@@ -2,11 +2,10 @@
 public class Number_of_digits_base {
     static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) {
-        int n = 6;
+        System.out.println((int) noofdigits(10, 2));
     }
 
-    static void noofdigits(int n) {
-        int digits = 0;
-        int ans = n & 1;
+    static double noofdigits(int n, int base) {
+        return (Math.log(n) / Math.log(base)) + 1;
     }
 }
