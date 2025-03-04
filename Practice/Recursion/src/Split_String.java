@@ -3,6 +3,7 @@ class Split_String {
         print_split("", "baccad");
         System.out.println(print_split_String("", "baccad"));
         System.out.println(skip("baccadah"));
+        System.out.println(stripApple("badapplenbbd"));
     }
 
     static void print_split(String positioned, String un_positioned) {
@@ -32,6 +33,7 @@ class Split_String {
 
     static String skip(String unpositioned) {
         if(unpositioned.isEmpty()) {
+
             return "";
         }
 
@@ -40,6 +42,18 @@ class Split_String {
             return skip(unpositioned.substring(1));
         }else {
             return ch + skip(unpositioned.substring(1));
+        }
+    }
+
+    static String  stripApple(String processd) {
+        if(processd.isEmpty()) {
+            return "";
+        }
+        if(processd.startsWith("apple")) {
+            return stripApple(processd.replace("apple", ""));
+        }
+        else {
+            return processd.charAt(0) +  stripApple(processd.substring(1));
         }
     }
 }
