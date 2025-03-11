@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Subset {
+public class Subseq {
     public static void main(String[] args) {
         String name = "abc";
         SubSeq_Approach("", name);
