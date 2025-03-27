@@ -8,7 +8,8 @@ class Find_ith_Bit {
         System.out.println(setIndex(Numb, 5));
         System.out.println(resetBit(Numb));
         System.out.println(Magical_Number(6));
-        System.out.println(count_bitsLength(6, 2));
+        System.out.println(count_bitsLength(34567, 10));
+        System.out.println(power_of_2_or_not(129));
     }
 
     static int notRepeated(int[] array) {
@@ -62,7 +63,7 @@ class Find_ith_Bit {
 //    }
 
     static int Magical_Number(int num) {
-        int mul_Numb = 500;
+        int mul_Numb = 10;
         int ans = 0;
         while(num > 0) {
             int last = num & 1;
@@ -76,6 +77,23 @@ class Find_ith_Bit {
     static int count_bitsLength(int n, int base) {
         int ans = (int)(Math.ceil(Math.log(n) / Math.log(base)));
         System.out.println("Bits Length is: " + ans);
+        return ans;
+    }
+
+    static int power_of_2_or_not(int n) {
+        int ans = 0;
+        int mul = 1;
+        while(n > 0) {
+            int last = n & 1;
+            n = n >> 1;
+            ans += last * mul;
+            mul *= 2;
+        }
+        if((ans & 1) == 0) {
+            System.out.println("The given number is a Power of 2");
+        }else {
+            System.out.println("The given number is not a power of 2");
+        }
         return ans;
     }
 }
