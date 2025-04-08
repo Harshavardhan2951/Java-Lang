@@ -1,7 +1,7 @@
 
 public class Sorted_R_Not {
     public static void main(String[] args) {
-        int[] num = {1, 6, 3, 4, 5};
+        int[] num = {1, 2, 8, 4, 5};
         System.out.println(checkSorted_R_Not(num, 0));
     }
 
@@ -9,10 +9,6 @@ public class Sorted_R_Not {
         if(n == Numb.length - 1) {
             return true;
         }
-        if(Numb[n] < Numb[n + 1] && n <= Numb.length-1) {
-            return checkSorted_R_Not(Numb, ++n);
-        }else {
-            return false;
-        }
+        return (Numb[n] < Numb[n + 1] && n <= Numb.length-1) && checkSorted_R_Not(Numb, n+1);
     }
 }
