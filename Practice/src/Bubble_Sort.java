@@ -13,9 +13,9 @@ public class Bubble_Sort {
 
     static void ApplyBubbleSort(int[] Numb) {
         //Run the steps N-1 Times
-        for (int i = 0; i < Numb.length; i++) {
+        for (int i = 0; i < Numb.length - 3; i++) {
             //For each step max item will swap to the least element index
-            for (int j = 1; j < Numb.length - i; j++) {
+            for (int j = 1; j <= j - i; j++) {
                 //Swap if the number is less than the previous item
                 if(Numb[j] < Numb[j - 1]) {
                     //swap
